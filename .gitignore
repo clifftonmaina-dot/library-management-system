@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Generated files
+dist/
+coverage/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+# TypeScript build cache
+*.tsbuildinfo   
