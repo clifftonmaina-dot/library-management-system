@@ -16,6 +16,7 @@ model User {
   id        String   @id @default(uuid())
   email     String   @unique
   name      String
+  password  String
   role      Role     @default(PATRON)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -31,6 +32,8 @@ model Book {
   id            String   @id @default(uuid())
   title         String
   author        String
+  isbn          String @unique
+  totalCopies   Int      @default(1)
   publishedYear Int
   genreId       String
   genre         Genre    @relation(fields: [genreId], references: [id])
